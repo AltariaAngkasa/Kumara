@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitra & Kolaborator - KUMARA</title>
+    <link rel="shortcut icon" href="assets/img/kumara_logo.jpeg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kumara: { DEFAULT: '#810955', light: '#a31b6f', dark: '#5e063d', bg: '#fdf2f8' }
+                    },
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-kumara flex items-center justify-center text-white font-bold text-xl group-hover:bg-kumara-dark transition"><img src="assets/img/kumara_logo.jpg" alt="kumara" srcset=""></div>
+                <span class="text-2xl font-bold text-kumara tracking-tight">KUMARA</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-600">
+                <a href="index.html" class="hover:text-kumara transition">Beranda</a>
+                <a href="tentang.html" class="hover:text-kumara transition">Tentang</a>
+                <a href="fitur.html" class="hover:text-kumara transition">Fitur</a>
+                <a href="dampak.html" class="hover:text-kumara transition">Dampak</a>
+                <a href="mitra.html" class="text-kumara font-bold">Mitra</a>
+                <a href="berita.html" class="hover:text-kumara transition">Berita</a>
+                <a href="kontak.html" class="px-5 py-2.5 bg-kumara text-white rounded-full hover:bg-kumara-dark transition shadow-lg shadow-kumara/30">Hubungi Kami</a>
+            </div>
+            <button onclick="toggleMenu()" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 absolute w-full shadow-lg">
+            <a href="index.html" class="block py-2 hover:text-kumara">Beranda</a>
+            <a href="tentang.html" class="block py-2 hover:text-kumara">Tentang Program</a>
+            <a href="fitur.html" class="block py-2 hover:text-kumara">Fitur Aplikasi</a>
+            <a href="mitra.html" class="block py-2 text-kumara font-bold">Mitra</a>
+            <a href="berita.html" class="block py-2 hover:text-kumara">Berita</a>
+            <a href="kontak.html" class="block py-2 mt-2 text-center bg-kumara text-white rounded-lg">Hubungi Kami</a>
+        </div>
+    </nav>
+
+    <header class="bg-kumara pt-32 pb-20 text-white relative">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Kolaborasi Pentahelix</h1>
+            <p class="text-pink-100 max-w-2xl mx-auto text-lg">
+                KUMARA tidak berjalan sendiri. Kami membangun ekosistem yang melibatkan Akademisi, Pemerintah Desa, dan Industri untuk menjamin keberlanjutan program.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-16 bg-white border-b">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10">
+                <span class="text-gray-500 font-semibold tracking-widest text-sm uppercase">Didukung Penuh Oleh</span>
+            </div>
+            
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
+                
+                <div class="w-32 h-20 flex items-center justify-center">
+                    <img src="assets/img/Telkomindo.png" alt="Telkom" class="h-8">
+                </div>
+
+                <div class="w-32 h-20 flex items-center justify-center">
+                    <img src="assets/img/univtelkom.png" alt="Universitas Telkom" class="h-8">
+                </div>
+
+                <!-- <div class="w-32 h-20 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-2xl">🌳</div>
+                        <div class="text-xs font-bold text-gray-600">PEMDES CIBURAYUT</div>
+                    </div>
+                </div> -->
+
+                <div class="w-32 h-20 flex items-center justify-center">
+                     <img src="assets/img/Danantara_Indonesia_Logo_2025_vertical-s1280.png" alt="Danantara" class="h-8">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-kumara-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Sinergi Peran</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mb-6">🏛️</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Pemerintah Desa Ciburayut</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Memberikan legalitas program, menyediakan ruang untuk pelatihan di Balai Desa, dan memfasilitasi koordinasi dengan tokoh masyarakat setempat.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300 border-2 border-kumara/20">
+                    <div class="w-14 h-14 bg-kumara text-white rounded-full flex items-center justify-center text-2xl mb-6">🎓</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Tim Mahasiswa & Dosen</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Bertanggung jawab atas pengembangan teknologi aplikasi, penyusunan modul kurikulum, dan pelaksanaan pelatihan (Training of Trainers).
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-2xl mb-6">🏢</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Innovillage & Telkom</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Memberikan pendanaan implementasi (Social Project Funding), mentoring ahli, dan dukungan infrastruktur jaringan jika diperlukan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Diskusi Keberlanjutan" class="rounded-2xl shadow-2xl">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-kumara font-bold uppercase tracking-wider text-sm mb-2 block">Pasca Program</span>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Rencana Keberlanjutan</h2>
+                    <p class="text-gray-600 mb-6">
+                        Agar manfaat KUMARA terus dirasakan setelah periode Innovillage selesai, kami telah merancang skema serah terima operasional:
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kumara text-white flex items-center justify-center font-bold text-sm">1</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Kaderisasi Digital (Lokal Champion)</h4>
+                                <p class="text-xs text-gray-500 mt-1">Melatih 3-5 ibu muda di desa sebagai "Admin Lokal" yang mampu mengatasi masalah teknis dasar aplikasi.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kumara text-white flex items-center justify-center font-bold text-sm">2</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Integrasi BUMDes</h4>
+                                <p class="text-xs text-gray-500 mt-1">Aplikasi KUMARA akan dijadikan aset digital BUMDes untuk memonitor potensi pajak/retribusi desa di masa depan.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-kumara text-white flex items-center justify-center font-bold text-sm">3</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Komunitas Belajar Mandiri</h4>
+                                <p class="text-xs text-gray-500 mt-1">Pembentukan grup WhatsApp "KUMARA Community" yang aktif saling berbagi tips bisnis tanpa ketergantungan penuh pada mahasiswa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-kumara flex items-center justify-center text-white font-bold text-xl group-hover:bg-kumara-dark transition"><img src="assets/img/kumara_logo.jpg" alt="kumara" srcset=""></div>
+                        <span class="text-xl font-bold">KUMARA</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Inovasi Aplikasi Customer Relationship Management untuk Pemberdayaan Perempuan Pelaku UMKM Menuju Ekonomi Berkelanjutan di Desa Ciburayut.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">Navigasi</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-kumara transition">Beranda</a></li>
+                        <li><a href="tentang.html" class="hover:text-kumara transition">Tentang Program</a></li>
+                        <li><a href="berita.html" class="hover:text-kumara transition">Berita & Kegiatan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">Kontak</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Desa Ciburayut, Cigombong</li>
+                        <li>Kabupaten Bogor, Jawa Barat</li>
+                        <li>Email: kumara.innovillage@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2025 KUMARA Innovillage Team. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita & Dokumentasi - KUMARA</title>
+    <link rel="shortcut icon" href="assets/img/kumara_logo.jpeg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kumara: { DEFAULT: '#810955', light: '#a31b6f', dark: '#5e063d', bg: '#fdf2f8' }
+                    },
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-kumara flex items-center justify-center text-white font-bold text-xl group-hover:bg-kumara-dark transition"><img src="assets/img/kumara_logo.jpg" alt="kumara" srcset=""></div>
+                <span class="text-2xl font-bold text-kumara tracking-tight">KUMARA</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-600">
+                <a href="index.html" class="hover:text-kumara transition">Beranda</a>
+                <a href="tentang.html" class="hover:text-kumara transition">Tentang</a>
+                <a href="fitur.html" class="hover:text-kumara transition">Fitur</a>
+                <a href="dampak.html" class="hover:text-kumara transition">Dampak</a>
+                <a href="mitra.html" class="hover:text-kumara transition">Mitra</a>
+                <a href="berita.html" class="text-kumara font-bold">Berita</a>
+                <a href="kontak.html" class="px-5 py-2.5 bg-kumara text-white rounded-full hover:bg-kumara-dark transition shadow-lg shadow-kumara/30">Hubungi Kami</a>
+            </div>
+            <button onclick="toggleMenu()" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 absolute w-full shadow-lg">
+            <a href="index.html" class="block py-2 hover:text-kumara">Beranda</a>
+            <a href="tentang.html" class="block py-2 hover:text-kumara">Tentang Program</a>
+            <a href="fitur.html" class="block py-2 hover:text-kumara">Fitur Aplikasi</a>
+            <a href="mitra.html" class="block py-2 hover:text-kumara">Mitra</a>
+            <a href="berita.html" class="block py-2 text-kumara font-bold">Berita</a>
+            <a href="kontak.html" class="block py-2 mt-2 text-center bg-kumara text-white rounded-lg">Hubungi Kami</a>
+        </div>
+    </nav>
+
+    <header class="bg-kumara pt-32 pb-20 text-white relative">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Kabar dari Ciburayut</h1>
+            <p class="text-pink-100 max-w-2xl mx-auto text-lg">
+                Mengikuti jejak langkah implementasi program KUMARA, dari sosialisasi hingga dampak nyata di lapangan.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-12 -mt-16 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row h-auto md:h-[450px] group">
+                <div class="md:w-3/5 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Peluncuran Aplikasi" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    <div class="absolute top-4 left-4 bg-kumara text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                        Kegiatan Terbaru
+                    </div>
+                </div>
+                <div class="md:w-2/5 p-8 md:p-12 flex flex-col justify-center">
+                    <div class="flex items-center gap-2 text-sm text-gray-500 mb-4">
+                        <span>📅 15 Agustus 2025</span>
+                        <span>•</span>
+                        <span>Balai Desa Ciburayut</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                        Resmi Diluncurkan! Aplikasi KUMARA Siap Digitalisasi 30 UMKM Perempuan
+                    </h2>
+                    <p class="text-gray-600 mb-6 line-clamp-3">
+                        Suasana haru dan bangga menyelimuti Balai Desa Ciburayut. Kepala Desa bersama tim Innovillage secara simbolis menyerahkan akses aplikasi kepada perwakilan UMKM, menandai babak baru ekonomi desa.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-kumara font-bold hover:underline">
+                        Baca Selengkapnya <span class="ml-2">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-10">
+                <h3 class="text-2xl font-bold text-gray-900">Jurnal Kegiatan</h3>
+                <div class="hidden md:flex gap-2">
+                    <button class="px-4 py-1 rounded-full bg-kumara text-white text-sm">Semua</button>
+                    <button class="px-4 py-1 rounded-full bg-gray-100 text-gray-600 text-sm hover:bg-gray-200">Pelatihan</button>
+                    <button class="px-4 py-1 rounded-full bg-gray-100 text-gray-600 text-sm hover:bg-gray-200">Kunjungan</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="flex flex-col group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-4 h-56 relative">
+                        <img src="https://images.unsplash.com/photo-1558403194-611308249627?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Training" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span class="absolute bottom-3 left-3 bg-white/90 px-2 py-1 text-xs font-bold text-kumara rounded">Pelatihan</span>
+                    </div>
+                    <div class="text-xs text-gray-500 mb-2">10 Agustus 2025</div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-kumara transition">Pelatihan "Digital Mindset" untuk Ibu-Ibu</h4>
+                    <p class="text-gray-600 text-sm line-clamp-3">
+                        Sesi pengenalan penggunaan smartphone untuk bisnis. Ternyata antusiasme ibu-ibu sangat tinggi untuk belajar foto produk.
+                    </p>
+                </article>
+
+                <article class="flex flex-col group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-4 h-56 relative">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Sosialisasi" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span class="absolute bottom-3 left-3 bg-white/90 px-2 py-1 text-xs font-bold text-kumara rounded">Sosialisasi</span>
+                    </div>
+                    <div class="text-xs text-gray-500 mb-2">25 Juli 2025</div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-kumara transition">Sosialisasi Program & Pendataan Awal</h4>
+                    <p class="text-gray-600 text-sm line-clamp-3">
+                        Tim KUMARA melakukan kunjungan ke rumah ketua PKK dan BUMDes untuk memetakan calon peserta program Innovillage.
+                    </p>
+                </article>
+
+                <article class="flex flex-col group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-4 h-56 relative">
+                        <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Survey" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <span class="absolute bottom-3 left-3 bg-white/90 px-2 py-1 text-xs font-bold text-kumara rounded">Survey</span>
+                    </div>
+                    <div class="text-xs text-gray-500 mb-2">15 Juli 2025</div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-kumara transition">Observasi Lapangan: Masalah Pencatatan</h4>
+                    <p class="text-gray-600 text-sm line-clamp-3">
+                        Menemukan fakta bahwa 80% pedagang masih mencatat hutang di sobekan kertas. Ini menjadi dasar pengembangan fitur CRM.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-kumara-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold text-gray-900">Galeri Momen</h3>
+                <p class="text-gray-600">Rekam jejak kebersamaan tim dan masyarakat Desa Ciburayut.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[500px] md:h-[600px]">
+                <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Foto Besar" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold border border-white px-4 py-2 rounded-full">Diskusi Kelompok</span>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Foto Kecil" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                </div>
+                <div class="rounded-2xl overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Foto Kecil" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                </div>
+                <div class="col-span-2 rounded-2xl overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Foto Lebar" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white border-t text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-gray-600 mb-4">Ingin melihat lebih banyak update harian?</p>
+            <a href="https://instagram.com" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-bold shadow-lg hover:shadow-xl transition">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                Follow Instagram KUMARA
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-kumara flex items-center justify-center text-white font-bold text-xl group-hover:bg-kumara-dark transition"><img src="assets/img/kumara_logo.jpg" alt="kumara" srcset=""></div>
+                        <span class="text-xl font-bold">KUMARA</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Inovasi Aplikasi Customer Relationship Management untuk Pemberdayaan Perempuan Pelaku UMKM Menuju Ekonomi Berkelanjutan di Desa Ciburayut.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">Navigasi</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-kumara transition">Beranda</a></li>
+                        <li><a href="tentang.html" class="hover:text-kumara transition">Tentang Program</a></li>
+                        <li><a href="berita.html" class="hover:text-kumara transition">Berita & Kegiatan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">Kontak</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Desa Ciburayut, Cigombong</li>
+                        <li>Kabupaten Bogor, Jawa Barat</li>
+                        <li>Email: kumara.innovillage@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2025 KUMARA Innovillage Team. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUMARA - UMKM Perempuan Berkarya</title>
+    <link rel="shortcut icon" href="assets/img/kumara_logo.jpeg" type="image/x-icon">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kumara: {
+                            DEFAULT: '#810955', // Warna Utama
+                            light: '#a31b6f',
+                            dark: '#5e063d',
+                            bg: '#fdf2f8' // Warna latar pendukung (soft pink/white)
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Smooth Scrolling */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-kumara flex items-center justify-center text-white font-bold text-xl group-hover:bg-kumara-dark transition"><img src="assets/img/kumara_logo.jpg" alt="kumara" srcset=""></div>
+                <span class="text-2xl font-bold text-kumara tracking-tight">KUMARA</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-600">
+                <a href="index.html" class="text-kumara font-bold">Beranda</a>
+                <a href="tentang.html" class="hover:text-kumara transition">Tentang</a>
+                <a href="fitur.html" class="hover:text-kumara transition">Fitur</a>
+                <a href="dampak.html" class="hover:text-kumara transition">Dampak</a>
+                <a href="mitra.html" class="hover:text-kumara transition">Mitra</a>
+                <a href="berita.html" class="hover:text-kumara transition">Berita</a>
+                <a href="kontak.html" class="px-5 py-2.5 bg-kumara text-white rounded-full hover:bg-kumara-dark transition shadow-lg shadow-kumara/30">Hubungi Kami</a>
+            </div>
+
+            <button onclick="toggleMenu()" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 absolute w-full shadow-lg">
+            <a href="index.html" class="block py-2 text-kumara font-bold">Beranda</a>
+            <a href="tentang.html" class="block py-2 hover:text-kumara">Tentang Program</a>
+            <a href="fitur.html" class="block py-2 hover:text-kumara">Fitur Aplikasi</a>
+            <a href="dampak.html" class="block py-2 hover:text-kumara">Dampak & Capaian</a>
+            <a href="mitra.html" class="block py-2 hover:text-kumara">Mitra</a>
+            <a href="berita.html" class="block py-2 hover:text-kumara">Berita</a>
+            <a href="kontak.html" class="block py-2 mt-2 text-center bg-kumara text-white rounded-lg">Hubungi Kami</a>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-kumara-bg -z-10"></div>
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-pink-100/50 to-transparent -z-10"></div>
+
+        <div class="container mx-auto px-6 text-center lg:text-left flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2">
+                <span class="inline-block py-1 px-3 rounded-full bg-pink-100 text-kumara text-xs font-bold tracking-wide mb-6">
+                    PROGRAM INNOVILLAGE 2025
+                </span>
+                <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                    Pemberdayaan Digital <br>
+                    <span class="text-kumara">UMKM Perempuan</span> <br>
+                    Desa Ciburayut
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    KUMARA hadir sebagai solusi CRM (Customer Relationship Management) sederhana untuk membantu ibu-ibu UMKM mengelola pelanggan, meningkatkan omzet, dan menuju ekonomi berkelanjutan.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="tentang.html" class="px-8 py-4 bg-kumara text-white rounded-full font-semibold hover:bg-kumara-dark transition shadow-xl shadow-kumara/20">
+                        Pelajari Program
+                    </a>
+                    <a href="fitur.html" class="px-8 py-4 bg-white text-kumara border border-kumara rounded-full font-semibold hover:bg-pink-50 transition">
+                        Lihat Fitur Aplikasi
+                    </a>
+                </div>
+                
+                <div class="mt-10 flex items-center justify-center lg:justify-start gap-6 opacity-70 grayscale hover:grayscale-0 transition duration-500">
+                    <span class="text-sm font-bold text-gray-400">Didukung oleh:</span>
+                    <img src="assets/img/Danantara.png" alt="Danantara" class="h-8">
+                    <img src="assets/img/Telkomindo.png" alt="Telkom" class="h-8">
+                    <img src="assets/img/univtelkom.png" alt="Universitas Telkom" class="h-8">
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 mt-12 lg:mt-0 relative">
+                <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-kumara/20 transform hover:-translate-y-2 transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ibu-ibu UMKM Diskusi" class="w-full h-auto">
+                    
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur p-4 rounded-xl shadow-lg flex items-center gap-4">
+                        <div class="bg-green-100 p-3 rounded-full text-green-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-semibold">Target Dampak</p>
+                            <p class="text-sm font-bold text-gray-900">Kenaikan Omzet UMKM 30%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-kumara/10 rounded-full blur-3xl -z-10"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Mengapa KUMARA Hadir?</h2>
+                <p class="text-gray-600">Berdasarkan survei di Desa Ciburayut, Kecamatan Cigombong, potensi ekonomi sangat tinggi namun terhambat oleh masalah digitalisasi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-100">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6 text-2xl">📉</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Omzet Stagnan</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Rata-rata omzet usaha stagnan di kisaran Rp1-2,5 juta per bulan karena jangkauan pasar yang terbatas.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-100">
+                    <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6 text-2xl">📝</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Pencatatan Manual</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Mayoritas UMKM masih mencatat transaksi secara manual sehingga tidak memiliki data pelanggan yang terstruktur.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-100">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6 text-2xl">📵</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Minim Literasi Digital</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Hanya 35% pelaku UMKM memiliki keterampilan digital dasar, dan <15% yang mengenal sistem manajemen pelanggan (CRM).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-kumara text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Solusi: Aplikasi CRM & Pendampingan</h2>
+            <p class="text-lg text-pink-100 max-w-2xl mx-auto mb-10">
+                KUMARA menggabungkan teknologi aplikasi pencatatan pelanggan yang mudah digunakan dengan pendampingan intensif berbasis komunitas.
+            </p>
+            <a href="fitur.html" class="inline-block px-8 py-4 bg-white text-kumara font-bold rounded-full hover:bg-gray-100 transition shadow-lg">
+                Lihat Demo Aplikasi
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-kumara flex items-center justify-center text-white font-bold text-xl group-hover:bg-kumara-dark transition"><img src="assets/img/kumara_logo.jpg" alt="kumara" srcset=""></div>
+                        <span class="text-xl font-bold">KUMARA</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Inovasi Aplikasi Customer Relationship Management untuk Pemberdayaan Perempuan Pelaku UMKM Menuju Ekonomi Berkelanjutan di Desa Ciburayut.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">Navigasi</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-kumara transition">Beranda</a></li>
+                        <li><a href="tentang.html" class="hover:text-kumara transition">Tentang Program</a></li>
+                        <li><a href="berita.html" class="hover:text-kumara transition">Berita & Kegiatan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">Kontak</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Desa Ciburayut, Cigombong</li>
+                        <li>Kabupaten Bogor, Jawa Barat</li>
+                        <li>Email: kumara.innovillage@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2025 KUMARA Innovillage Team. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

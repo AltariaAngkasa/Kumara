@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - KUMARA</title>
+    <link rel="shortcut icon" href="assets/img/kumara_logo.jpeg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kumara: { DEFAULT: '#810955', light: '#a31b6f', dark: '#5e063d', bg: '#fdf2f8' }
+                    },
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-kumara flex items-center justify-center text-white font-bold text-xl group-hover:bg-kumara-dark transition"><img src="assets/img/kumara_logo.jpg" alt="kumara" srcset=""></div>
+                <span class="text-2xl font-bold text-kumara tracking-tight">KUMARA</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-600">
+                <a href="index.html" class="hover:text-kumara transition">Beranda</a>
+                <a href="tentang.html" class="hover:text-kumara transition">Tentang</a>
+                <a href="fitur.html" class="hover:text-kumara transition">Fitur</a>
+                <a href="dampak.html" class="hover:text-kumara transition">Dampak</a>
+                <a href="mitra.html" class="hover:text-kumara transition">Mitra</a>
+                <a href="berita.html" class="hover:text-kumara transition">Berita</a>
+                <a href="kontak.html" class="px-5 py-2.5 bg-kumara text-white rounded-full hover:bg-kumara-dark transition shadow-lg shadow-kumara/30">Hubungi Kami</a>
+            </div>
+            <button onclick="toggleMenu()" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 absolute w-full shadow-lg">
+            <a href="index.html" class="block py-2 hover:text-kumara">Beranda</a>
+            <a href="tentang.html" class="block py-2 hover:text-kumara">Tentang Program</a>
+            <a href="fitur.html" class="block py-2 hover:text-kumara">Fitur Aplikasi</a>
+            <a href="mitra.html" class="block py-2 hover:text-kumara">Mitra</a>
+            <a href="berita.html" class="block py-2 hover:text-kumara">Berita</a>
+            <a href="kontak.html" class="block py-2 mt-2 text-center bg-kumara text-white rounded-lg">Hubungi Kami</a>
+        </div>
+    </nav>
+
+    <header class="bg-kumara pt-32 pb-20 text-white relative">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Mari Berkolaborasi</h1>
+            <p class="text-pink-100 max-w-2xl mx-auto text-lg">
+                Punya pertanyaan tentang aplikasi KUMARA atau ingin menjalin kerjasama untuk pemberdayaan UMKM? Kami siap mendengar.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-16 bg-white -mt-10 relative z-10 rounded-t-[3rem]">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Hubungi Tim Kami</h2>
+                    
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-kumara/10 text-kumara rounded-full flex items-center justify-center shrink-0">📍</div>
+                            <div>
+                                <h5 class="font-bold text-gray-900">Sekretariat Program</h5>
+                                <p class="text-sm text-gray-600">Kantor Desa Ciburayut, Kec. Cigombong, Kab. Bogor, Jawa Barat 16110</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-kumara/10 text-kumara rounded-full flex items-center justify-center shrink-0">📧</div>
+                            <div>
+                                <h5 class="font-bold text-gray-900">Email Resmi</h5>
+                                <p class="text-sm text-gray-600">kumara.innovillage@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-kumara/10 text-kumara rounded-full flex items-center justify-center shrink-0">📱</div>
+                            <div>
+                                <h5 class="font-bold text-gray-900">WhatsApp Admin</h5>
+                                <p class="text-sm text-gray-600">+62 812-3456-7890 (Kak Admin)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form onsubmit="kirimPesan(event)" class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Nama Lengkap</label>
+                            <input type="text" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-kumara" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-kumara" placeholder="email@contoh.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Pesan</label>
+                            <textarea class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-kumara h-32" placeholder="Tulis pesan atau tawaran kerjasama..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-kumara text-white font-bold py-3 rounded-lg hover:bg-kumara-dark transition shadow-lg">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+
+                <div class="h-full min-h-[400px] bg-gray-200 rounded-3xl overflow-hidden shadow-lg border-4 border-white relative">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31707.568453472064!2d106.79374945!3d-6.7297223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69cb971661797f%3A0x401576d14fed540!2sCiburayut%2C%20Kec.%20Cigombong%2C%20Kabupaten%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1709123456789!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    
+                    <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur p-4 rounded-xl shadow-lg border border-gray-200">
+                        <div class="text-xs font-bold text-kumara uppercase mb-1">Lokasi Implementasi</div>
+                        <p class="text-sm text-gray-800 font-semibold">Desa Ciburayut, Kaki Gunung Salak</p>
+                        <p class="text-xs text-gray-500">Kecamatan Cigombong, Bogor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-kumara-bg">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-900">Sering Ditanyakan (FAQ)</h2>
+                <p class="text-gray-600">Jawaban cepat untuk pertanyaan seputar program KUMARA.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white p-6 rounded-2xl shadow-sm cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between gap-1.5 text-gray-900 font-bold">
+                        <span>Apakah aplikasi ini gratis untuk UMKM?</span>
+                        <span class="bg-gray-100 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center shrink-0 group-open:bg-kumara group-open:text-white transition">+</span>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-gray-600 text-sm">
+                        Ya, aplikasi KUMARA diberikan 100% GRATIS kepada mitra UMKM binaan di Desa Ciburayut selama program berlangsung, termasuk pendampingan penggunaannya.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl shadow-sm cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between gap-1.5 text-gray-900 font-bold">
+                        <span>HP apa yang dibutuhkan untuk menggunakan KUMARA?</span>
+                        <span class="bg-gray-100 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center shrink-0 group-open:bg-kumara group-open:text-white transition">+</span>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-gray-600 text-sm">
+                        Aplikasi KUMARA sangat ringan (Lite Version). Bisa dijalankan di smartphone Android entry-level dengan RAM minimal 2GB dan sistem operasi Android 8 ke atas.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl shadow-sm cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between gap-1.5 text-gray-900 font-bold">
+                        <span>Bagaimana jika data pelanggan saya hilang?</span>
+                        <span class="bg-gray-100 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center shrink-0 group-open:bg-kumara group-open:text-white transition">+</span>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-gray-600 text-sm">
+                        Jangan khawatir! Data tersimpan aman di sistem Cloud (server) kami secara otomatis. Jika HP Anda rusak atau ganti HP baru, data akan kembali setelah login.
+                    </p>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl shadow-sm cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between gap-1.5 text-gray-900 font-bold">
+                        <span>Apakah program ini akan berlanjut tahun depan?</span>
+                        <span class="bg-gray-100 text-gray-500 rounded-full w-6 h-6 flex items-center justify-center shrink-0 group-open:bg-kumara group-open:text-white transition">+</span>
+                    </summary>
+                    <p class="mt-4 leading-relaxed text-gray-600 text-sm">
+                        Target kami adalah keberlanjutan (Sustainability). Setelah fase inisiasi Innovillage selesai, pengelolaan teknis akan diserahterimakan secara bertahap kepada unit digital BUMDes Ciburayut.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-kumara flex items-center justify-center text-white font-bold text-xl group-hover:bg-kumara-dark transition"><img src="assets/img/kumara_logo.jpg" alt="kumara" srcset=""></div>
+                        <span class="text-xl font-bold">KUMARA</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Inovasi Aplikasi Customer Relationship Management untuk Pemberdayaan Perempuan Pelaku UMKM Menuju Ekonomi Berkelanjutan di Desa Ciburayut.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">Navigasi</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-kumara transition">Beranda</a></li>
+                        <li><a href="tentang.html" class="hover:text-kumara transition">Tentang Program</a></li>
+                        <li><a href="berita.html" class="hover:text-kumara transition">Berita & Kegiatan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">Kontak</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Desa Ciburayut, Cigombong</li>
+                        <li>Kabupaten Bogor, Jawa Barat</li>
+                        <li>Email: kumara.innovillage@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2025 KUMARA Innovillage Team. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function kirimPesan(e) {
+            e.preventDefault();
+            // Simulasi pengiriman
+            alert("Terima kasih! Pesan Anda telah kami terima. Tim KUMARA akan segera menghubungi Anda.");
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
